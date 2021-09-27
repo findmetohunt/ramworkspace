@@ -1,0 +1,7 @@
+---
+- name: Install jenkins
+  hosts: localhost
+  connection: local
+
+  roles:
+    - ansible
