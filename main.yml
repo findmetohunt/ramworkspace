@@ -1,0 +1,4 @@
+---
+# tasks file for jenkins
+- import_tasks: pre-requisite.yaml
+- import_tasks: installation-files.yaml
