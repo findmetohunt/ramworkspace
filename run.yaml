@@ -1,7 +1,7 @@
 ---
 - name: Install jenkins
   hosts: all
-  Remote_user: ec2-user
+  remote_user: ec2-user
   #connection: local
 
   roles:
