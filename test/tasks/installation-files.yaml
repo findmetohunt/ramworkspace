@@ -15,8 +15,8 @@
       enabled: true
 
 - name: Display first password for the jenkins
-  shell: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-  register: shell_output
+  command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  register: command_output
 
 - debug:
-    var: shell_output.stdout_lines
+    var: command_output.stdout_lines
