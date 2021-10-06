@@ -1,8 +1,8 @@
 ---
 - name: Execute a command using the shell module
-  become: true
-  become_user: root
-  shell: amazon-linux-extras install epel
+ # become: true
+  #become_user: root
+  command: sudo amazon-linux-extras install epel -y
 
 - name: Install Java 8 using YUM
   yum:
@@ -17,5 +17,3 @@
   rpm_key:
       state: present
       key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-
-
