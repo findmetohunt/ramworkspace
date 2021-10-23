@@ -3,19 +3,19 @@
   yum:
     name: jenkins
     state: installed
-  become: true
+
 - name: start jenkins
   systemd:
       name: jenkins
       state: started
-  become: true
+
 - name: enable jenkins
   systemd:
       name: jenkins
       enabled: true
 
 - name: Display first password for the jenkins
-  command: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  shell: sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   register: command_output
 
 - debug:
