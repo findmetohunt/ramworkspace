@@ -1,8 +1,8 @@
 ---
 - name: Execute a command using the shell module
- # become: true
+  #become: true
   #become_user: root
-  command: sudo amazon-linux-extras install epel -y
+  shell: sudo amazon-linux-extras install epel -y
 
 - name: Install Java 11 using YUM
   yum:
